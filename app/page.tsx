@@ -4,12 +4,12 @@ const projects = [
   {n:"03", type:"OBJECT-ORIENTED SYSTEM", title:"Online Food Ordering", desc:"A Java ordering system with menu management, billing, priority ordering, undo operations and daily aggregation.", tech:["Java","OOP","SQLite","Data Structures"]}
 ];
 const toolbox = [
-  ["Languages","C · C++ · Java · JavaScript · TypeScript · Python · PHP · R"],
-  ["Web & Backend","React · Node.js · NestJS · Spring · Maven · Nginx"],
-  ["Data","PostgreSQL · MySQL · MongoDB · Redis · Supabase · Elasticsearch"],
-  ["Cloud & DevOps","AWS · Vercel · Cloudflare · Docker · Kubernetes · Jenkins · GitHub"],
-  ["Data & ML","scikit-learn · NumPy · Pandas · Matplotlib"],
-  ["Tools","Postman · Figma · Windows Terminal"]
+  {category:'Languages', items:[{name:'C', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg'}, {name:'C++', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg'}, {name:'Java', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg'}, {name:'JavaScript', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'}, {name:'TypeScript', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'}, {name:'Python', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg'}, {name:'PHP', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg'}, {name:'R', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg'}]},
+  {category:'Web & Backend', items:[{name:'React', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'}, {name:'Node.js', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg'}, {name:'NestJS', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg'}, {name:'Spring', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg'}, {name:'Maven', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg'}, {name:'Nginx', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nginx/nginx-original.svg'}]},
+  {category:'Data', items:[{name:'PostgreSQL', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg'}, {name:'MySQL', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg'}, {name:'MongoDB', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg'}, {name:'Redis', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg'}, {name:'Supabase', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg'}, {name:'Elasticsearch', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elasticsearch/elasticsearch-original.svg'}]},
+  {category:'Cloud & DevOps', items:[{name:'AWS', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg'}, {name:'Vercel', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg'}, {name:'Cloudflare', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg'}, {name:'Docker', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg'}, {name:'Kubernetes', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg'}, {name:'Jenkins', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg'}, {name:'GitHub', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg'}]},
+  {category:'Data & ML', items:[{name:'scikit-learn', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg'}, {name:'NumPy', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg'}, {name:'Pandas', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg'}, {name:'Matplotlib', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg'}]},
+  {category:'Tools', items:[{name:'Postman', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg'}, {name:'Figma', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg'}, {name:'Windows Terminal', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg'}]},
 ];
 export default function Home(){return <main>
   <nav className="nav"><a className="logo" href="#top">CP<span>.</span></a><div className="navLinks"><a href="#work">Work</a><a href="#about">About</a><a href="#stack">Stack</a></div><a className="talk" href="mailto:palihawadanacharutha@gmail.com">LET&apos;S TALK ↗</a></nav>
@@ -41,7 +41,51 @@ export default function Home(){return <main>
       <li className="educationItem"><div className="educationLogo"><img src="/somaweera-logo.png" alt="Somaweera Chandrasiri Vidyalaya emblem" /></div><div className="educationDetails"><h3>Somaweera Chandrasiri Vidyalaya, Piliyandala</h3><time>2009 — 2014</time></div><span className="educationPlace">PILIYANDALA<br/>SRI LANKA</span></li>
     </ol></div>
   </section>
-  <section className="content" id="stack"><header><small>03 / TOOLBOX</small><h2>Tech I work <em>with.</em></h2></header><div className="toolbox">{toolbox.map(([a,b])=><article key={a}><b>{a}</b><p>{b}</p></article>)}</div></section>
-  <section className="content"><header><small>04 / BEYOND CODE</small><h2>Credentials & <em>range.</em></h2></header><div className="beyond"><article><small>AWS ACADEMY</small><h3>Cloud & Security</h3><p>Cloud Foundations · Microservices & CI/CD Pipeline Builder · Cloud Security Foundations · Cloud Security Builder</p></article><article><small>COMPETITIVE CHESS</small><h3>Championships</h3><p>Sri Lanka Inter School Team Chess Championship — Division C · Western Province Schools U11</p></article><article><small>ACADEMIC WORK</small><h3>Research mindset</h3><p>Analysis of Linear Regression · Mathematical Modelling for Mechanical Vibration</p></article></div></section>
+  <section className="content" id="stack"><header><small>03 / TOOLBOX</small><h2>Tech I work <em>with.</em></h2></header><div className="toolbox toolboxV8">{toolbox.map(group=><article className="toolboxGroup" key={group.category}><h3>{group.category}</h3><div className="techGrid">{group.items.map(tool=><div className="techTile" key={tool.name} title={tool.name}><div className="techIcon"><img src={tool.icon} alt="" loading="lazy" /></div><span>{tool.name}</span></div>)}</div></article>)}</div></section>
+  <section className="content achievementsSection" id="achievements">
+    <header><small>04 / BEYOND CODE</small><h2>Credentials & <em>range.</em></h2></header>
+    <div className="achievementGrid">
+      <article className="achievementCard awsCard">
+        <div className="achievementTop"><span>01 / AWS ACADEMY</span><span className="achievementYear">2026</span></div>
+        <div className="achievementIdentity"><div className="achievementMark awsMark">aws<span>academy</span></div><div><h3>Cloud &amp; Security</h3><p>Four AWS Academy graduate training badges, covering cloud infrastructure, security and microservices delivery.</p></div></div>
+        <div className="badgeGrid">
+          {[
+            {name:"Cloud Security Builder",date:"AUG 2026",src:"https://images.credly.com/images/cceb6e0f-55f4-45d5-aec6-0e4435f488c6/blob"},
+            {name:"Cloud Security Foundations",date:"JUL 2026",src:"https://images.credly.com/images/7f7ea828-a10d-44f8-8baa-58a9c1af7671/twitter_thumb_201604_blob"},
+            {name:"Microservices & CI/CD Pipeline Builder",date:"JUL 2026",src:"https://images.credly.com/images/6ff76b93-852c-4f9e-a73a-fc10424a1007/twitter_thumb_201604_blob"},
+            {name:"Cloud Foundations",date:"JUN 2026",src:"https://images.credly.com/images/e3541a0c-dd4a-4820-8052-5001006efc85/twitter_thumb_201604_blob"}
+          ].map(b=><div className="badgeItem" key={b.name}><div className="badgeImage"><img src={b.src} alt={`AWS Academy ${b.name} training badge`} loading="lazy" /></div><div><strong>{b.name}</strong><small>{b.date}</small></div></div>)}
+        </div>
+        <p className="badgeDisclaimer">Official badge artwork · Individual verification links can be added later.</p>
+      </article>
+      <article className="achievementCard chessCard">
+        <div className="achievementTop"><span>02 / COMPETITIVE CHESS</span><span className="achievementYear">2012 — 2013</span></div>
+        <div className="achievementArtwork chessArtwork" aria-hidden="true"><span>♞</span><i>STRATEGY / LEADERSHIP</i></div>
+        <h3>Championships</h3>
+        <div className="achievementEntries">
+          <div><strong>National Inter-School Team Chess Championship</strong><small>DIVISION C · CHAMPIONS · 2013</small><p>Team leader; helped bring the school's first chess championship.</p></div>
+          <div><strong>Western Province Schools — Under 11</strong><small>KCA 10TH ANNIVERSARY · CHAMPIONS · 2012</small><p>Led the winning Under-11 Boys team.</p></div>
+        </div>
+      </article>
+      <article className="achievementCard researchCard">
+        <div className="achievementTop"><span>03 / ACADEMIC WORK</span><span className="achievementYear">2025</span></div>
+        <div className="achievementArtwork researchArtwork" aria-hidden="true"><span>∑</span><i>ANALYZE / MODEL / EXPLORE</i></div>
+        <h3>Research mindset</h3>
+        <div className="achievementEntries">
+          <div><strong>Analysis of Linear Regression</strong><small>MAY — AUG 2025</small><p>Research into regression methods, mathematical writing and LaTeX.</p></div>
+          <div><strong>Mathematical Modelling for Mechanical Vibration</strong><small>JAN — MAY 2025</small><p>Spring–mass systems, damping and mathematical modelling.</p></div>
+        </div>
+      </article>
+      <article className="achievementCard writingCard">
+        <div className="achievementTop"><span>04 / CREATIVE WRITING</span><span className="achievementYear">2017</span></div>
+        <div className="achievementArtwork writingArtwork" aria-hidden="true"><span>✒</span><i>CREATIVITY / EXPRESSION</i></div>
+        <h3>Beyond the technical</h3>
+        <div className="achievementEntries">
+          <div><strong>Creative Writing — First Place</strong><small>NATIONAL LITERATURE CEREMONY · 2017</small><p>Recognized for creative writing by the Department of Cultural Affairs.</p></div>
+          <div><strong>Divisional &amp; Provincial Recognition</strong><small>1ST DIVISIONAL · 3RD PROVINCIAL</small><p>Associated with Mahanama College Colombo.</p></div>
+        </div>
+      </article>
+    </div>
+  </section>
   <footer><p>HAVE AN IDEA? LET&apos;S MAKE IT REAL.</p><h2>LET&apos;S <em>BUILD.</em></h2><div><span>© 2026 CHARUTHA PALIHAWADANA</span><aside><a href="https://github.com/pRaharshAxi">GitHub ↗</a><a href="https://www.linkedin.com/in/charutha-palihawadana-7b8aa92a3">LinkedIn ↗</a><a href="mailto:palihawadanacharutha@gmail.com">Email ↗</a></aside></div></footer>
 </main>}
