@@ -93,3 +93,108 @@
 .workV10 .projectTechGlyph{font-size:11px;color:var(--lime)}
 @media(max-width:1100px){.workV10 .projects{grid-template-columns:1fr 1fr}.workV10 .project:first-child{grid-column:1/-1}.workV10 .projectVisual{height:260px}}
 @media(max-width:650px){.workV10 .projects{grid-template-columns:1fr}.workV10 .project:first-child{grid-column:auto}.workV10 .projectVisual{height:210px}.workV10 .projectBody{padding:22px}}
+
+/* V11 RESPONSIVE EDITION — overrides only at tablet/mobile widths.
+   Desktop V10 layout and palette are intentionally unchanged. */
+html,body{max-width:100%;overflow-x:clip}
+img,svg,video{max-width:100%}
+.content,.content>*,.project,.projectBody,.toolboxGroup,.achievementCard,.educationPanel{min-width:0}
+.content h2,.achievementCard h3,.educationDetails h3{overflow-wrap:break-word}
+@media(max-width:1024px){
+  .nav{padding-inline:4%}
+  .navLinks{gap:22px}
+  .hero{min-height:850px}
+  .heroLeft{width:100%;max-width:800px}
+  .hero h1 strong{font-size:clamp(62px,11.6vw,116px)}
+  .hero h1 span{font-size:clamp(37px,6.8vw,74px)}
+  .heroLeft>p{max-width:540px}
+  .portrait{right:-5%;width:50%;height:64%}
+  .content{padding:90px 4%}
+  .content h2{font-size:clamp(48px,7.2vw,88px)}
+  .workV10 .projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .workV10 .project:first-child{grid-column:1/-1}
+  .aboutV7{grid-template-columns:1fr}
+  .educationPanel{width:100%}
+}
+@media(max-width:700px){
+  .nav{height:74px;position:absolute;padding:0 18px;gap:12px;flex-wrap:nowrap}
+  .logo{font-size:26px;flex:0 0 auto}
+  .navLinks{display:flex;align-items:center;gap:12px;min-width:0;font-size:10px;white-space:nowrap}
+  .talk{font-size:9px;padding:11px 9px;white-space:nowrap;flex:0 0 auto}
+  .hero{height:auto;min-height:0;padding:106px 20px 0;display:flex;flex-direction:column;isolation:isolate}
+  .grid{inset:74px 0 0 0;opacity:.15}
+  .heroLeft{width:100%;padding-top:12px;z-index:9}
+  .availability{font-size:9px;line-height:1.65;letter-spacing:.025em;margin-bottom:30px;max-width:100%}
+  .availability i{margin-right:8px;width:8px;height:8px}
+  .hero h1{line-height:.95;letter-spacing:-.07em;max-width:100%}
+  .hero h1 strong{font-size:clamp(43px,12.4vw,84px);white-space:nowrap}
+  .hero h1 span{font-size:clamp(27px,7.35vw,52px);white-space:nowrap;margin-top:8px;-webkit-text-stroke:.7px #9aa29e}
+  .heroLeft>p{font-size:clamp(16px,4.4vw,21px);line-height:1.48;margin:24px 0 22px;width:100%;max-width:460px}
+  .heroButtons{gap:10px;flex-wrap:wrap}
+  .heroButtons a{min-height:48px;height:auto;padding:12px 16px;font-size:10px}
+  .portrait{position:relative;z-index:7;right:auto;bottom:auto;align-self:center;width:min(100%,410px);height:auto;max-height:450px;object-fit:contain;object-position:center;opacity:1;margin-top:0;margin-bottom:-4px;mask-image:linear-gradient(to bottom,#000 0%,#000 79%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 79%,transparent 100%)}
+  .portraitAura{width:75%;height:360px;right:12%;bottom:125px}
+  .ring{width:78vw;right:-25%;top:39%}
+  .ringSquare{display:none}
+  .skillBar{position:relative;z-index:12;left:auto;bottom:auto;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;padding:16px 0 20px;border-top:1px solid #38433a}
+  .skillBar>div{min-width:0;padding:13px 6px;gap:8px;border:0;margin:0}
+  .skillBar i{font-size:22px;flex:0 0 25px}
+  .skillBar b{font-size:11px}
+  .skillBar small{font-size:8px;line-height:1.45}
+  .content{padding:74px 20px}
+  .content header{margin-bottom:34px}
+  .content header small{margin-bottom:18px}
+  .content h2{font-size:clamp(42px,10.6vw,70px);line-height:1.02;overflow-wrap:normal}
+  .workV10 .projects{grid-template-columns:minmax(0,1fr)}
+  .workV10 .project:first-child{grid-column:auto}
+  .workV10 .projectVisual{height:clamp(175px,53vw,260px)}
+  .workV10 .projectBody{padding:22px}
+  .workV10 .projectBody h3{font-size:clamp(25px,7vw,36px)}
+  .workV10 .projectTech{gap:7px}
+  .workV10 .projectTechTag{font-size:10px;max-width:100%}
+  .aboutV7{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+  .aboutV7 .aboutIntro h2{font-size:clamp(47px,11.6vw,76px);margin-bottom:27px}
+  .aboutV7 .aboutIntro .lead{font-size:clamp(20px,5.1vw,26px);line-height:1.4}
+  .aboutV7 .aboutSecondary{font-size:14px}
+  .educationHeading{flex-direction:column;align-items:flex-start;gap:8px}
+  .educationTimeline{padding-left:28px}
+  .educationTimeline:before{left:5px}
+  .educationItem{grid-template-columns:58px minmax(0,1fr);gap:12px;min-height:105px}
+  .educationItem:before{left:-27px}
+  .educationLogo{width:58px;height:62px;padding:5px}
+  .educationDetails h3{font-size:15px}
+  .educationDetails p{font-size:11px}
+  .educationDetails time{font-size:10px}
+  .educationPlace{grid-column:2;font-size:9px;margin-top:-4px;white-space:normal}
+  .toolboxV8{grid-template-columns:minmax(0,1fr)}
+  .toolboxV8 .toolboxGroup{padding:18px}
+  .techGrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+  .techTile{min-width:0;min-height:92px}
+  .achievementsSection .achievementGrid{grid-template-columns:minmax(0,1fr)}
+  .achievementCard{padding:19px}
+  .badgeGrid{grid-template-columns:minmax(0,1fr)}
+  .badgeItem{min-width:0}
+  footer{padding:75px 20px 30px}
+  footer h2{font-size:clamp(53px,13.5vw,92px);line-height:.95;margin:30px 0 55px}
+  footer>div{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+  footer aside{margin:0;gap:16px}
+}
+@media(max-width:380px){
+  .nav{padding-inline:12px;gap:8px}
+  .logo{font-size:23px}
+  .navLinks{gap:8px;font-size:9px}
+  .talk{font-size:8px;padding:9px 7px}
+  .hero{padding-inline:14px}
+  .hero h1 strong{font-size:12vw}
+  .hero h1 span{font-size:7.15vw}
+  .content{padding-inline:14px}
+  .content h2{font-size:clamp(38px,10vw,55px)}
+  .achievementIdentity{gap:10px}
+  .achievementMark{flex-basis:58px;width:58px;height:58px;font-size:23px}
+  .achievementCard h3{font-size:23px}
+  footer{padding-inline:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .project,.achievementCard,.techTile{transition:none}
+}
